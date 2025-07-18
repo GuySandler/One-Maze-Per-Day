@@ -28,6 +28,7 @@ offset_right = 520.0
 offset_bottom = 264.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+z_index = 1
 
 [node name="timer" type="Label" parent="."]
 offset_left = -428.0
@@ -74,15 +75,9 @@ offset_bottom = -281.0
 text = "Today's Best:"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
-offset_left = -560.0
-offset_top = -32.0
-offset_right = -448.0
-offset_bottom = -1.0
-text = "restart"
-
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
+z_as_relative = false
 offset_left = -608.0
 offset_top = -344.0
 offset_right = 616.0
@@ -91,11 +86,22 @@ texture = ExtResource("2_e2o6t")
 stretch_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
+light_mask = 2
+visibility_layer = 2
 z_index = -1
 offset_left = -560.0
 offset_top = -256.0
 offset_right = -448.0
-offset_bottom = 8.0
+offset_bottom = -56.0
 color = Color(0.166853, 0.166853, 0.166853, 1)
+
+[node name="Button" type="Button" parent="."]
+visibility_layer = 15
+z_index = 2
+offset_left = -560.0
+offset_top = -32.0
+offset_right = -448.0
+offset_bottom = -1.0
+text = "restart"
 
 [connection signal="pressed" from="Button" to="." method="restartGame"]
