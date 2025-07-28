@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal timer_updated(time_text: String)
 signal timer_finished(time_text: String)
 
-const SPEED := 2000
+const SPEED := 200
 const GOAL_REACH_DISTANCE := 12.0
 
 var timer_started := false
